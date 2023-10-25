@@ -7,7 +7,7 @@ export default async function Home() {
   const cities = [
     { name: '서울', code: 'seoul' },
     { name: '뉴욕', code: 'NYC' },
-    { name: '런던', code: 'london' },
+    { name: '런던2', code: 'london' },
   ]
 
   return (
