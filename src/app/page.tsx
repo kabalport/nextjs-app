@@ -7,11 +7,15 @@ export default async function Home() {
   const cities = [
     { name: '서울', code: 'seoul' },
     { name: '뉴욕', code: 'NYC' },
-    { name: '런던2', code: 'london' },
+    { name: '런던', code: 'london' },
   ]
 
   return (
     <>
+      <h1>ChatGpt api</h1>
+      <div>
+
+      </div>
       <h1>날씨 앱</h1>
       <RevalidateButton tag="time" />
       <ul className={style.list}>
