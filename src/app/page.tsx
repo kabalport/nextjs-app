@@ -16,7 +16,6 @@ export default async function Home() {
     <>
         <div>
         <h1>Portfolio</h1>
-        <RevalidateButton tag="time" />
         </div>
         <ul className={style.list}>
             {moveLinks.map((moveLink) => {

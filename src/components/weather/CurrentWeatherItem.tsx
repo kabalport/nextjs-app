@@ -1,4 +1,4 @@
-import { getCurrentWeather } from '@/utils/getCurrentWeather'
+import { getCurrentWeather } from '@/utils/weather/getCurrentWeather'
 import CurrentWeatherCondition from './CurrentWeatherCondition'
 import Link from 'next/link'
 

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { getTime } from '@/utils/getTime'
+import { getTime } from '@/utils/weather/getTime'
 
 type Props = {
   timeZone: string

@@ -1,6 +1,6 @@
 'use client'
 
-import revalidate from '@/utils/revalidate'
+import revalidate from '@/utils/weather/revalidate'
 
 type Props = {
   tag: string

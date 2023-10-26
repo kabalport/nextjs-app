@@ -2,7 +2,7 @@ import CurrentWeatherCondition from '@/components/weather/CurrentWeatherConditio
 import ForecastItem from '@/components/weather/ForecastItem'
 import HomeButton from '@/components/HomeButton'
 import RevalidateButton from '@/components/RevalidateButton'
-import { getForecast } from '@/utils/getForecast'
+import { getForecast } from '@/utils/weather/getForecast'
 
 import style from './style.module.css'
 

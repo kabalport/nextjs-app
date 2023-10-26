@@ -1,4 +1,4 @@
-import { getCurrentWeather } from '@/utils/getCurrentWeather'
+import { getCurrentWeather } from '@/utils/weather/getCurrentWeather'
 import Link from 'next/link'
 
 type Props = {
