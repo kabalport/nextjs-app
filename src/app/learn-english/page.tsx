@@ -1,7 +1,6 @@
 'use client'
 import Header from "@/components/learn-english/header";
 import styles from './style.module.css';
-import YourSentences from "@/app/learn-english/yourSentences";
 import {useState} from "react";
 
 
@@ -42,7 +41,7 @@ export default async function Detail() {
         <>
            <Header />
             <div className={styles.wrapper}>
-                <YourSentences onSubmit={handleSubmitSentence} />
+                <h2>test</h2>
             </div>
         </>
     )

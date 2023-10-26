@@ -2,7 +2,7 @@ import CurrentWeatherItem from '@/components/weather/CurrentWeatherItem'
 import RevalidateButton from '@/components/RevalidateButton'
 
 import style from './style.module.css'
-import EnglishButton from "@/components/learn-english/EnglishButton";
+
 import Link from "next/link";
 import MoveLinkItem from "@/components/MoveLinkItem";
 
