@@ -3,7 +3,7 @@ import Header from "@/components/learn-english/header";
 import styles from './style.module.css';
 import YourSentences from "@/app/learn-english/yourSentences";
 import {useState} from "react";
-import CorrectSentences from "@/app/learn-english/correctSentences";
+
 
 
 export default async function Detail() {
@@ -43,7 +43,6 @@ export default async function Detail() {
            <Header />
             <div className={styles.wrapper}>
                 <YourSentences onSubmit={handleSubmitSentence} />
-                <CorrectSentences after={after} />
             </div>
         </>
     )

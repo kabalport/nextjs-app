@@ -8,7 +8,7 @@ import MoveLinkItem from "@/components/MoveLinkItem";
 
 export default async function Home() {
   const moveLinks = [
-    { name: '영어교정', code: 'english' },
+    { name: '영어교정', code: 'learn-english' },
     { name: '날씨', code: 'weather' },
   ]
 
