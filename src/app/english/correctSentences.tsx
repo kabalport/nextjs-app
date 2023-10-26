@@ -5,6 +5,8 @@ import { SpeakerSimpleHigh, CopySimple } from '@phosphor-icons/react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Title from "@/components/learn-english/layouts/Title";
 import TextBox from "@/components/learn-english/layouts/TextBox";
+import Error from "@/components/learn-english/layouts/Error";
+import Tooltip from "@/components/learn-english/layouts/ToolTips";
 
 const CorrectSentences = ({ after }) => {
     const [voiceError, setVoiceError] = useState('');
