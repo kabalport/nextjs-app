@@ -1,9 +1,9 @@
 'use client'
 import Header from "@/components/learn-english/header";
 import styles from './style.module.css';
-import YourSentences from "@/app/english/yourSentences";
+import YourSentences from "@/app/learn-english/yourSentences";
 import {useState} from "react";
-import CorrectSentences from "@/app/english/correctSentences";
+import CorrectSentences from "@/app/learn-english/correctSentences";
 
 
 export default async function Detail() {

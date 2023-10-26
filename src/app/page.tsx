@@ -1,36 +1,35 @@
-import CurrentWeatherItem from '@/components/CurrentWeatherItem'
+import CurrentWeatherItem from '@/components/weather/CurrentWeatherItem'
 import RevalidateButton from '@/components/RevalidateButton'
 
 import style from './style.module.css'
 import EnglishButton from "@/components/learn-english/EnglishButton";
+import Link from "next/link";
+import MoveLinkItem from "@/components/MoveLinkItem";
 
 export default async function Home() {
-  const cities = [
-    { name: '서울', code: 'seoul' },
-    { name: '뉴욕', code: 'NYC' },
-    { name: '런던', code: 'london' },
+  const moveLinks = [
+    { name: '영어교정', code: 'english' },
+    { name: '날씨', code: 'weather' },
   ]
 
   return (
     <>
-      <h1>ChatGpt를 활용한 영어문장 교정앱</h1>
-      <div>
-        <EnglishButton />
-      </div>
-
-      <h1>날씨 앱</h1>
-      <RevalidateButton tag="time" />
-      <ul className={style.list}>
-        {cities.map((city) => {
-          return (
-            <CurrentWeatherItem
-              key={city.code}
-              cityCode={city.code}
-              cityName={city.name}
-            />
-          )
-        })}
-      </ul>
+        <div>
+        <h1>Portfolio</h1>
+        <RevalidateButton tag="time" />
+        </div>
+        <ul className={style.list}>
+            {moveLinks.map((moveLink) => {
+                return (
+              <MoveLinkItem
+                  key={moveLink.code}
+                  name={moveLink.name}
+                  code={moveLink.code}
+              />
+                )
+            })
+            }
+        </ul>
     </>
   )
 }

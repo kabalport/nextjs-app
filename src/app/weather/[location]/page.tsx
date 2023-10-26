@@ -1,5 +1,5 @@
-import CurrentWeatherCondition from '@/components/CurrentWeatherCondition'
-import ForecastItem from '@/components/ForecastItem'
+import CurrentWeatherCondition from '@/components/weather/CurrentWeatherCondition'
+import ForecastItem from '@/components/weather/ForecastItem'
 import HomeButton from '@/components/HomeButton'
 import RevalidateButton from '@/components/RevalidateButton'
 import { getForecast } from '@/utils/getForecast'

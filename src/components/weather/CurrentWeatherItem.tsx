@@ -12,7 +12,7 @@ export default async function CurrentWeatherItem({
   cityCode,
 }: Props) {
   const { current, location } = await getCurrentWeather(cityCode)
-  const path = `/${cityCode}?name=${cityName}`
+  const path = `/weather/${cityCode}?name=${cityName}`
 
   return (
     <li key={cityName}>
