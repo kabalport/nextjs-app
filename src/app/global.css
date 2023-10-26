@@ -6,3 +6,12 @@ button {
   color: white;
   background-color: green;
 }
+
+/* global.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: #f1f1f1;
+}
