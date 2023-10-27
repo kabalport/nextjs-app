@@ -29,7 +29,7 @@ export interface Usage {
 
 
 
-export const  getChatGpt = async (): Promise<Response> => {
+const  getChatGpt = async (): Promise<Response> => {
     try {
         const res = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
