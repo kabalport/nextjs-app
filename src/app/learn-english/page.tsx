@@ -1,15 +1,16 @@
 import Header from "@/components/learn-english/header";
 import styles from './style.module.css';
-import {getChatGpt} from "@/utils/learn-english/getChatGpt";
+
+import ChatGptItem from "@/components/learn-english/ChatGptItem";
 
 
 
 export default async function Detail() {
-    const choices  = await getChatGpt()
+
 
     return (
         <>
-            <h1>{choices}</h1>
+            <ChatGptItem/>
            <Header />
             <div className={styles.wrapper}>
                 <h2>test</h2>

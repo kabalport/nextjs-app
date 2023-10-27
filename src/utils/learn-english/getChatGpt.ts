@@ -57,7 +57,7 @@ export const  getChatGpt = async (): Promise<Response> => {
         }
 
         const data = await res.json();
-        return data.choices[0].message.content
+        return data
     } catch (error) {
         console.error("Error fetching data:", error);
     }
