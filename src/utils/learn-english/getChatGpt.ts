@@ -56,7 +56,7 @@ export const  getChatGpt = async (): Promise<Response> => {
             throw new Error('chatgpt 정보를 가져올수 없습니다.')
         }
 
-        const data = await res.json();
+        const data = res.json();
         return data
     } catch (error) {
         console.error("Error fetching data:", error);
