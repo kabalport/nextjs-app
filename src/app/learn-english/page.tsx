@@ -5,11 +5,11 @@ import {getChatGpt} from "@/utils/learn-english/getChatGpt";
 
 
 export default async function Detail() {
-    const data  = await getChatGpt()
+    const choices  = await getChatGpt()
 
     return (
         <>
-            <h1>{data}</h1>
+            <h1>{choices}</h1>
            <Header />
             <div className={styles.wrapper}>
                 <h2>test</h2>
