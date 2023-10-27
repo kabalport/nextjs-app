@@ -13,3 +13,8 @@ npm run dev # 프로그램 실행
 ```
 
 4. 이제 [http://localhost:3000](http://localhost:3000)로 접속해 서비스를 확인하실 수 있습니다.
+
+
+### json to typescript 쉽게하는법
+https://transform.tools/json-to-typescript
+이 사이트에 json을 넣고 copy>그런다음 Root를 Response로 바꾸고 사용하고 있습니다.
