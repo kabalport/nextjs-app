@@ -6,10 +6,9 @@ export default async function ChatGptItem() {
     return (
         <div>
             <h1>test</h1>
-                <h1>{choices.map((res) => (
-                    <h1>{res.message.content}</h1>
-                ))}
-                </h1>
+            {choices.map((res, index) => (
+                <h1 key={index}>{res.message.content}</h1>
+            ))}
         </div>
     )
 }

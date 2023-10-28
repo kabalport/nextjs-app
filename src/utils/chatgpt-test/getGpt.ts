@@ -26,7 +26,7 @@ interface Usage {
 
 
 export const getGpt = async (): Promise<Response> => {
-    try {
+
         const res = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -53,7 +53,4 @@ export const getGpt = async (): Promise<Response> => {
         }
 
         return res.json();
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
 }
