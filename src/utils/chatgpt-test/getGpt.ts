@@ -27,11 +27,12 @@ interface Usage {
 
 export const getGpt = async (): Promise<Response> => {
     try {
-        const res = await fetch("/api/chat", {
+        const res = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-            },
+                "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
+    },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
                 messages: [
@@ -51,8 +52,7 @@ export const getGpt = async (): Promise<Response> => {
             throw new Error('chatgpt 정보를 가져올수 없습니다.')
         }
 
-        const data = await res.json();
-        return data;
+        return res.json();
     } catch (error) {
         console.error("Error fetching data:", error);
     }
