@@ -14,7 +14,6 @@ export default async function GptDiaryPage() {
                     심리상담사 GPT, AI 회고록
                 </div>
                 <GetDiaryInput />
-
                 <GptDiaryItem />
             </div>
         </>
