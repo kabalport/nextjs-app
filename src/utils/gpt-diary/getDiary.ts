@@ -24,20 +24,32 @@ interface Usage {
     total_tokens: number
 }
 
-const messages = [
-    {
-        role: "system",
-        content: `## INFO ##
+
+
+export const getDiary = async ( prompt: string ): Promise<Response> => {
+
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [
+                {
+                    role: "system",
+                    content: `## INFO ##
     you can add images to the reply by URL, Write the image in JSON field 
     Use the Unsplash API (https://source.unsplash.com/1600x900/?). the query is just some tags that describes the image ## DO NOT RESPOND TO INFO BLOCK ##`,
-    },
-    {
-        role: "system",
-        content: `You are a psychological counselor who writes and analyzes emotional diaries. Proceed in the following order.`,
-    },
-    {
-        role: "user",
-        content: `1. [title] : Think of the diary title after understanding the [events] separated by """ at the bottom.
+                },
+                {
+                    role: "system",
+                    content: `You are a psychological counselor who writes and analyzes emotional diaries. Proceed in the following order.`,
+                },
+                {
+                    role: "user",
+                    content: `1. [title] : Think of the diary title after understanding the [events] separated by """ at the bottom.
       2. [summarize] : summarize events in order with one line sentence.
       3. [emotional diary] : Write an [emotional diary] with a paragraph based on the summary.
       4. [evaluates] : The written emotional [evaluates], using explore the unconscious based on the contents of the [emotional diary].
@@ -58,27 +70,15 @@ const messages = [
       }
       
       [events]:`,
-    },
-    {
-        role: "user",
-        content: `
+                },
+                {
+                    role: "user",
+                    content: `
         """
         ${prompt}
         """`,
-    },
-];
-
-export const getDiary = async ( prompt: string ): Promise<Response> => {
-
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages,
+                },
+            ],
             temperature: 0.7,
             max_tokens: 1_000,
         })

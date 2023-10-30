@@ -10,6 +10,7 @@ export default async function Home() {
   const moveLinks = [
     { name: 'chatgpt test', code: 'chatgpt-test' },
     { name: '날씨', code: 'weather' },
+      { name: 'GptDiary', code: 'gpt-diary' },
   ]
 
   return (

@@ -1,0 +1,46 @@
+.title {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.resultTitle {
+    font-size: 35px;
+    margin: 10px;
+}
+
+.divider {
+    margin-top: 20px;
+}
+
+.diaryContainer {
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    border-radius: 2px;
+    margin: 10px 0px;
+}
+
+.cardTitle {
+    margin: 6px;
+    color: #6b6b6b;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cardContent {
+    /* empty styles for now */
+}
+
+.actionList {
+    font-size: 16px;
+}
+
+.actionListItem {
+    margin-bottom: 5px;
+}
