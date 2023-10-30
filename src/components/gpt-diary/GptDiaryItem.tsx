@@ -1,5 +1,4 @@
 import styles from './gptDiary.module.css';
-import {Response} from "@/utils/gpt-diary/getDiary";
 
 type DiaryItemProps = {
     data: {
