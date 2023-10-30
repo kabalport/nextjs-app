@@ -45,7 +45,7 @@ export default async function GptDiaryItem() {
                 <div className={styles.cardTitle}>GPT 조언</div>
                 <div className={styles.cardContent}>
                     <ul className={styles.actionList}>
-                        {data.action_list.map((action, index) => (
+                        {data.action_list.map((action: string, index: number) => (
                             <li key={index} className={styles.actionListItem}>{action}</li>
                         ))}
                     </ul>
