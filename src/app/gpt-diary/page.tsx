@@ -12,7 +12,7 @@ export default async function GptDiaryPage() {
                 <div className={styles.appTitle}>
                     심리상담사 GPT, AI 회고록
                 </div>
-                <GptDiaryItem data={dummyData} />
+                <GptDiaryItem />
             </div>
         </>
     )
