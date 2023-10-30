@@ -1,0 +1,19 @@
+.title {
+    /* 여기에 Title 스타일을 적용하세요 */
+}
+
+.textArea {
+    height: 200px;
+}
+
+.buttonContainer {
+    margin: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.canvas {
+    display: none;
+}

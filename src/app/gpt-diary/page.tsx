@@ -1,5 +1,6 @@
 import GptDiaryItem from "@/components/gpt-diary/GptDiaryItem";
 import styles from './style.module.css';
+import GetDiaryInput from "@/components/gpt-diary/getDiaryInput";
 
 export default async function GptDiaryPage() {
     const dummyData = JSON.parse(
@@ -12,6 +13,8 @@ export default async function GptDiaryPage() {
                 <div className={styles.appTitle}>
                     심리상담사 GPT, AI 회고록
                 </div>
+                <GetDiaryInput />
+
                 <GptDiaryItem />
             </div>
         </>
