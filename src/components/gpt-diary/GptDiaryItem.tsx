@@ -31,7 +31,7 @@ const AppConatiner = styled.div`
             `;
 export default function GptDiaryItem(){
 
-    const [data, setData] = useState<DiaryData>(dummyData);
+    const [data, setData] = useState(dummyData);
 
     const [isLoading, setIsLoading] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
@@ -39,12 +39,8 @@ export default function GptDiaryItem(){
     const handleClickAPICall = async (userInput) => {
         try {
             setIsLoading(true);
-
-            const response = await CallGPT(`${userInput}`);
-            const messageContent = response.choices[0].message.content;
-            const message: DiaryData = JSON.parse(messageContent);
-
-            setData(message);
+            const message:any = await CallGPT(`${userInput}`);
+            setData(JSON.parse(message));
         } catch (error) {
             messageApi.open({
                 type: "error",
@@ -55,7 +51,6 @@ export default function GptDiaryItem(){
             setIsLoading(false);
         }
     };
-
 
     const handleSubmit = (userInput) => {
         handleClickAPICall(userInput);
