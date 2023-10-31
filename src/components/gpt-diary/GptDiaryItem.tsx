@@ -37,7 +37,7 @@ export default function GptDiaryItem(){
     const [isLoading, setIsLoading] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
 
-    const handleClickAPICall = async (userInput) => {
+    const handleClickAPICall = async (userInput: string) => {
         try {
             setIsLoading(true);
             const message:any = await CallGPT(`${userInput}`);
@@ -53,9 +53,10 @@ export default function GptDiaryItem(){
         }
     };
 
-    const handleSubmit = (userInput) => {
+    const handleSubmit = (userInput: string) => {
         handleClickAPICall(userInput);
     };
+
 
     return (
         <>
