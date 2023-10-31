@@ -30,8 +30,7 @@ const AppConatiner = styled.div`
             margin: 0 auto;
             `;
 export default function GptDiaryItem(){
-
-//    const [data, setData] = useState(dummyData);
+    
     const [data, setData] = useState<DiaryData>(dummyData);
 
 

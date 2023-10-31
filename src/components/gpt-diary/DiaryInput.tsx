@@ -6,8 +6,15 @@ import { FileImageOutlined } from "@ant-design/icons";
 import html2canvas from "html2canvas";
 
 const { TextArea } = Input;
+type DiaryInputProps = {
+    isLoading: boolean;
+    onSubmit: (input: string) => void;
+    messageApi: {
+        open: (options: { type: "error" | "success", content: string }) => void;
+    };
+};
 
-const DiaryInput = ({ isLoading, onSubmit, messageApi }) => {
+const DiaryInput = ({ isLoading, onSubmit, messageApi }:DiaryInputProps) => {
     const [userInput, setUserInput] = useState("");
     // 사용자의 입력을 받아, 상위컴포넌트로 데이터를 전달
 
