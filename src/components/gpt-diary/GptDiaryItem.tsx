@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { message } from "antd";
 import DiaryInput from "@/components/gpt-diary/DiaryInput";
 import DiaryDisplay from "@/components/gpt-diary/DiaryDisplay";
-import {CallGPT} from "@/utils/gpt-diary/CallGpt";
+import {CallGPT, CallGptResponse} from "@/utils/gpt-diary/CallGpt";
 
 type DiaryData = {
     title: string;
@@ -40,18 +40,23 @@ export default function GptDiaryItem(){
     const handleClickAPICall = async (userInput: string) => {
         try {
             setIsLoading(true);
-            const message:any = await CallGPT(`${userInput}`);
-            setData(JSON.parse(message));
-        } catch (error: Error) {
+            const response: CallGptResponse = await CallGPT(userInput);
+            const messageContent = response.choices[0].message.content;
+            const parsedData: DiaryData = JSON.parse(messageContent);
+            setData(parsedData);
+        } catch (error: any) {
             messageApi.open({
                 type: "error",
-                content: error?.message,
+                content: error.message,
             });
             return;
         } finally {
             setIsLoading(false);
         }
     };
+
+
+
 
     const handleSubmit = (userInput: string) => {
         handleClickAPICall(userInput);

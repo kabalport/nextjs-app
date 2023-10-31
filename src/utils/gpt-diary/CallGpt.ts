@@ -1,4 +1,4 @@
-export interface Response {
+export interface CallGptResponse {
     id: string
     object: string
     created: number
@@ -26,7 +26,7 @@ interface Usage {
 
 
 
-export const CallGPT = async ( prompt: string ): Promise<Response> => {
+export const CallGPT = async (prompt: string): Promise<CallGptResponse> => {
     const messages = [
         {
             role: "system",
@@ -89,5 +89,5 @@ export const CallGPT = async ( prompt: string ): Promise<Response> => {
 
     const message = responseData.choices[0].message.content;
 
-    return message;
+    return responseData; // responseData는 Response 타입의 객체입니다.
 };
