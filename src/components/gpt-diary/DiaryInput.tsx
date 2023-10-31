@@ -1,4 +1,4 @@
-import { Input, Button, message } from "antd";
+import { Input, Button } from "antd";
 import { useState } from "react";
 import { Title } from "./CommonStyles";
 import styled from "styled-components";
@@ -19,9 +19,10 @@ const DiaryInput = ({ isLoading, onSubmit, messageApi }:DiaryInputProps) => {
     // 사용자의 입력을 받아, 상위컴포넌트로 데이터를 전달
 
     // loading 상태 - 사용자가 제출버튼을 못 누르도록 처리
-    const handleUserInput = (e) => {
+    const handleUserInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setUserInput(e.target.value);
     };
+
     const handleClick = () => {
         if (!userInput) {
             messageApi.open({
