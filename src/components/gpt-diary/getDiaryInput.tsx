@@ -49,8 +49,8 @@ export default function GetDiaryInput({data}:DiaryItemProps) {
         } finally {
             console.log('final');
         }
+        setUserInput("");
 
-        setUserInput(null);
     };
 
 
