@@ -24,8 +24,21 @@ const ThumbnailImage = styled(Image)`
   border-radius: 8px;
   margin-bottom: 15px;
 `;
+type DiaryData = {
+    title: string;
+    summary: string;
+    thumbnail: string;
+    emotional_content: string;
+    emotional_result: string;
+    analysis: string;
+    action_list: string[];
+};
 
-const DiaryDisplay = ({ data, isLoading }) => {
+type DiaryDisplayProps = {
+    data: DiaryData;
+    isLoading: boolean;
+};
+const DiaryDisplay = ({ data, isLoading }:DiaryDisplayProps) => {
     return (
         <DiaryContainer>
             {isLoading && (

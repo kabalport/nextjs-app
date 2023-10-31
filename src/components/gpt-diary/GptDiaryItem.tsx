@@ -31,7 +31,9 @@ const AppConatiner = styled.div`
             `;
 export default function GptDiaryItem(){
 
-    const [data, setData] = useState(dummyData);
+//    const [data, setData] = useState(dummyData);
+    const [data, setData] = useState<DiaryData>(dummyData);
+
 
     const [isLoading, setIsLoading] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
@@ -66,7 +68,7 @@ export default function GptDiaryItem(){
                 onSubmit={handleSubmit}
             />
             <div id="capture">
-                <DiaryDisplay isLoading={isLoading} data={data} />
+                <DiaryDisplay data={data} isLoading={isLoading} />
             </div>
             </AppConatiner>
         </>
