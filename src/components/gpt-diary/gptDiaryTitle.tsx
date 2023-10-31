@@ -1,8 +1,9 @@
 import styles from "@/components/chatgpt-test/header.module.css";
 import React from "react";
 
+
 const GptDiaryTitle = () => {
-    return <div className={styles.header}>심리상담사 GPT, AI 회고록</div>;
+    return <div className={styles.header}>심리상담사 GPT, AI 회고록<img width={"100px"} src="/logo.png"></img></div>;
 };
 
 export default GptDiaryTitle;
