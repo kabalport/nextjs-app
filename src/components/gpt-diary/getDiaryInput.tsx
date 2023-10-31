@@ -11,9 +11,10 @@ export default function GetDiaryInput() {
 
 
     // loading 상태 - 사용자가 제출버튼을 못 누르도록 처리
-    const handleUserInput = (e: any) => {
+    const handleUserInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setUserInput(e.target.value);
     };
+
     const handleClick = async () => {
         if (!userInput) {
             console.log('일과를 적어주세요');
