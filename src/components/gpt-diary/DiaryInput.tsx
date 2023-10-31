@@ -42,15 +42,20 @@ const DiaryInput = ({ isLoading, onSubmit, messageApi }:DiaryInputProps) => {
 
     const captureAndDownload = async () => {
         const nodeToCapture = document.getElementById("capture");
-        console.log(nodeToCapture);
-        // HTML2Canvas를 사용하여 노드의 스크린샷을 생성합니다.
+        if (!nodeToCapture) {
+            messageApi.open({
+                type: "error",
+                content: "캡처할 요소를 찾을 수 없습니다.",
+            });
+            return;
+        }
+
         html2canvas(nodeToCapture, {
             allowTaint: true,
             useCORS: true,
         }).then(function (canvas) {
             // 스크린샷을 이미지로 변환합니다.
             const image = canvas.toDataURL("image/png");
-
             // 이미지를 다운로드할 수 있는 링크를 생성합니다.
             const a = document.createElement("a");
             a.href = image;
@@ -58,6 +63,7 @@ const DiaryInput = ({ isLoading, onSubmit, messageApi }:DiaryInputProps) => {
             a.click();
         });
     };
+
     return (
         <div>
             <Title>오늘의 일</Title>
