@@ -42,7 +42,7 @@ export default function GptDiaryItem(){
             setIsLoading(true);
             const message:any = await CallGPT(`${userInput}`);
             setData(JSON.parse(message));
-        } catch (error: any) {
+        } catch (error: Error) {
             messageApi.open({
                 type: "error",
                 content: error?.message,
