@@ -37,7 +37,7 @@ const DiaryInput = ({ isLoading, onSubmit, messageApi }:DiaryInputProps) => {
         });
 
         onSubmit(userInput);
-        setUserInput(null);
+        setUserInput("");
     };
 
     const captureAndDownload = async () => {
