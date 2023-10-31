@@ -8,7 +8,7 @@ export default function GetDiaryInput() {
     // 사용자의 입력을 받아, 상위컴포넌트로 데이터를 전달
 
     // loading 상태 - 사용자가 제출버튼을 못 누르도록 처리
-    const handleUserInput = (e) => {
+    const handleUserInput = (e: any) => {
         setUserInput(e.target.value);
     };
     const handleClick = () => {
